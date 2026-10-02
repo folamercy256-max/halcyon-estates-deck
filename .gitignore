@@ -1,0 +1,16 @@
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / tooling
+.vscode/
+.idea/
+*.swp
+
+# Vercel local artifacts
+.vercel/
+
+# Logs
+*.log
+npm-debug.log*

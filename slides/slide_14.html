@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact — Halcyon Estates</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="global.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+  html, body { margin:0; padding:0; }
+  .left { position:absolute; left:64px; top:54px; bottom:50px; width:660px; display:flex; flex-direction:column; }
+  .eyebrow-row { display:flex; align-items:center; gap:14px; }
+  .eyebrow { font-family:var(--font-body); font-size:12px; font-weight:700; letter-spacing:.24em; color:var(--accent-deep); text-transform:uppercase; }
+  .headline { font-family:var(--font-heading); font-size:40px; font-weight:600; line-height:1.16; letter-spacing:-0.01em; color:var(--ink); margin:16px 0 0; max-width:640px; }
+  .body-copy { margin:16px 0 0; font-size:16.5px; line-height:1.6; color:var(--ink-muted); max-width:600px; }
+  .cta-row { display:flex; align-items:center; gap:14px; margin-top:28px; }
+  .pill { display:inline-flex; align-items:center; justify-content:center; height:50px; border-radius:999px; font-family:var(--font-body); }
+  .pill-filled { background:var(--accent-deep); color:var(--on-dark); font-size:17px; font-weight:700; padding:0 32px; letter-spacing:.01em; }
+  .pill-outline { border:1.5px solid rgba(31,61,44,0.4); color:var(--ink); font-size:16px; font-weight:600; padding:0 28px; background:transparent; }
+  .contact-grid { display:grid; grid-template-columns:1fr 1fr; column-gap:34px; row-gap:24px; margin-top:36px; }
+  .c-item { display:flex; align-items:flex-start; gap:14px; }
+  .c-icon { width:40px; height:40px; border-radius:9999px; background:var(--accent-soft); display:flex; align-items:center; justify-content:center; flex:none; }
+  .c-icon .material-icons { font-size:20px; color:var(--accent); }
+  .c-text { margin:0; font-size:15px; line-height:1.5; color:var(--ink-muted); padding-top:1px; }
+  .c-lead { font-weight:700; color:var(--ink); }
+  .newsletter { margin-top:auto; border-top:1px solid var(--hairline); }
+  .newsletter p { margin:16px 0 0; font-size:13.5px; line-height:1.55; color:var(--ink-faint); max-width:620px; }
+  .panel { position:absolute; top:24px; right:24px; bottom:24px; width:470px; border-radius:24px; overflow:hidden; }
+  .agent-cutout { position:absolute; bottom:58px; left:50%; transform:translateX(-50%); height:424px; width:auto; }
+  .agent-card { position:absolute; top:26px; left:26px; right:26px; box-sizing:border-box; background:rgba(247,243,236,0.06); border:1px solid var(--hairline-dark); border-radius:16px; padding:18px 20px; }
+  .agent-id { display:flex; align-items:center; gap:14px; }
+  .agent-avatar { width:54px; height:54px; border-radius:9999px; object-fit:cover; flex:none; border:1px solid var(--hairline-dark); }
+  .agent-name { font-family:var(--font-heading); font-size:21px; font-weight:600; color:var(--on-dark); line-height:1.15; }
+  .agent-role { font-size:11.5px; font-weight:700; letter-spacing:.22em; color:var(--accent); text-transform:uppercase; margin-top:5px; }
+  .agent-line { margin:12px 0 0; font-size:13.5px; line-height:1.5; color:var(--on-dark-muted); }
+  .panel-footer { position:absolute; left:0; right:0; bottom:0; height:58px; border-top:1px solid var(--hairline-dark); display:flex; align-items:center; justify-content:center; gap:12px; }
+  .wm-serif { font-family:var(--font-heading); font-size:19px; font-weight:600; color:var(--on-dark); }
+  .wm-sep { color:var(--on-dark-faint); font-size:15px; }
+  .wm-caps { font-size:10.5px; font-weight:700; letter-spacing:.3em; color:var(--on-dark); text-transform:uppercase; }
+</style>
+</head>
+<body class="slide">
+  <main class="left">
+    <div class="eyebrow-row">
+      <span class="accent-bar"></span>
+      <span class="eyebrow">LET&rsquo;S FIND YOUR HOME</span>
+    </div>
+    <h1 class="headline">Tell us what you are looking for. We will start matching you with homes this week.</h1>
+    <p class="body-copy">No long intake form, no sales calls. Just a real conversation with a real agent about what you want your next address to feel like.</p>
+
+    <div class="cta-row">
+      <span class="pill pill-filled">Get Started</span>
+      <span class="pill pill-outline">View current listings</span>
+    </div>
+
+    <div class="contact-grid">
+      <div class="c-item">
+        <span class="c-icon"><i class="material-icons">place</i></span>
+        <p class="c-text"><span class="c-lead">Office</span> — 514 Sunset Boulevard, Suite 210, Los Angeles, CA 90026</p>
+      </div>
+      <div class="c-item">
+        <span class="c-icon"><i class="material-icons">call</i></span>
+        <p class="c-text tnum"><span class="c-lead">Phone</span> — (213) 555-0142</p>
+      </div>
+      <div class="c-item">
+        <span class="c-icon"><i class="material-icons">mail</i></span>
+        <p class="c-text"><span class="c-lead">Email</span> — hello@halcyonestates.com</p>
+      </div>
+      <div class="c-item">
+        <span class="c-icon"><i class="material-icons">schedule</i></span>
+        <p class="c-text tnum"><span class="c-lead">Office hours</span> — Mon to Fri, 8:30am to 6:00pm PT</p>
+      </div>
+    </div>
+
+    <div class="newsletter">
+      <p>One short email a month. New listings and market notes. No spam, no listings you have seen three times already.</p>
+    </div>
+  </main>
+
+  <aside class="panel-dark panel">
+    <img class="agent-cutout" src="contact_agent.png" alt="Halcyon agent holding a small model house">
+    <div class="agent-card">
+      <div class="agent-id">
+        <span class="agent-avatar" aria-hidden="true" style="background:rgba(247,243,236,0.08);border:1.5px solid var(--accent);display:inline-flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-weight:600;font-size:17px;letter-spacing:0.06em;color:var(--on-dark);">MV</span>
+        <div>
+          <div class="agent-name">Marlene Vasquez</div>
+          <div class="agent-role">Founding Broker</div>
+        </div>
+      </div>
+      <p class="agent-line">Every message goes straight to a real person on our team.</p>
+    </div>
+    <footer class="panel-footer">
+      <span class="wm-serif">Halcyon</span>
+      <span class="wm-sep">|</span>
+      <span class="wm-caps">Estates</span>
+    </footer>
+  </aside>
+</body>
+</html>

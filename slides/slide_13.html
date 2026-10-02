@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Client Reviews — Halcyon Estates</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="global.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+  html, body { margin:0; padding:0; }
+  .wrap { width:100%; height:100%; box-sizing:border-box; display:flex; flex-direction:column; padding:52px 64px 48px; }
+  .eyebrow-row { display:flex; align-items:center; gap:14px; }
+  .eyebrow { font-family:var(--font-body); font-size:12px; font-weight:700; letter-spacing:.24em; color:var(--accent-deep); text-transform:uppercase; }
+  .headline { font-family:var(--font-heading); font-size:38px; font-weight:600; line-height:1.12; letter-spacing:-0.01em; color:var(--ink); margin:12px 0 0; }
+  .rating { height:58px; display:flex; align-items:center; justify-content:space-between; margin-top:22px; padding:0 28px; }
+  .rating-group { display:flex; align-items:center; gap:14px; }
+  .stat { font-size:15.5px; color:var(--ink-muted); }
+  .stat-num { font-family:var(--font-body); font-weight:700; font-size:17px; color:var(--accent-deep); }
+  .stars { display:flex; align-items:center; gap:3px; }
+  .stars .material-icons { font-size:18px; color:var(--accent); }
+  .quotes { flex:1; min-height:0; display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:22px; }
+  .quote-card { display:flex; flex-direction:column; padding:30px 36px 32px; box-sizing:border-box; }
+  .qmark { font-family:var(--font-heading); font-size:84px; line-height:1; height:50px; margin-top:-12px; color:var(--accent); }
+  .quote { margin:10px 0 0; font-size:18px; line-height:1.62; color:var(--ink); }
+  .attrib { margin-top:auto; padding-top:22px; display:flex; align-items:center; gap:16px; }
+  .avatar { width:62px; height:62px; border-radius:9999px; background:var(--surface-deep); border:1px solid var(--hairline); overflow:hidden; flex:none; box-shadow:0 1px 3px rgba(31,61,44,0.10); }
+  .avatar img { width:100%; height:100%; object-fit:cover; object-position:center top; display:block; }
+  .name { font-size:17px; font-weight:700; color:var(--ink); line-height:1.2; }
+  .role { font-size:13.5px; color:var(--ink-muted); margin-top:3px; }
+</style>
+</head>
+<body class="slide">
+  <main class="wrap">
+    <header>
+      <div class="eyebrow-row">
+        <span class="accent-bar"></span>
+        <span class="eyebrow">CLIENT REVIEWS</span>
+      </div>
+      <h1 class="headline">What people say after closing with us</h1>
+    </header>
+
+    <div class="card rating">
+      <div class="rating-group">
+        <span class="stat"><span class="stat-num tnum">92%</span> of clients refer us to a friend</span>
+      </div>
+      <div class="rating-group">
+        <span class="stars" aria-hidden="true">
+          <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i>
+        </span>
+        <span class="stat"><span class="stat-num tnum">4.9/5</span> average rating across <span class="stat-num tnum">380+</span> reviews</span>
+      </div>
+    </div>
+
+    <section class="quotes">
+      <article class="card quote-card">
+        <div class="qmark" aria-hidden="true" data-decor>&ldquo;</div>
+        <p class="quote">We had been looking for almost a year before we found Halcyon. They actually listened to what we wanted and never tried to push us into something just to close a deal. We are in our house eight months now and still love it.</p>
+        <figure class="attrib" style="margin:auto 0 0;">
+          <span class="avatar"><img src="client_chris.png" alt="Chris Gerald"></span>
+          <figcaption>
+            <div class="name">Chris Gerald</div>
+            <div class="role">Small Business Owner, Pasadena</div>
+          </figcaption>
+        </figure>
+      </article>
+
+      <article class="card quote-card">
+        <div class="qmark" aria-hidden="true" data-decor>&ldquo;</div>
+        <p class="quote">What sold me on working with them was the honesty. They told me to walk away from two places I was ready to overpay for and ended up finding me something better for less. That kind of advice is rare.</p>
+        <figure class="attrib" style="margin:auto 0 0;">
+          <span class="avatar"><img src="client_nayla.png" alt="Nayla Latief"></span>
+          <figcaption>
+            <div class="name">Nayla Latief</div>
+            <div class="role">Interior Designer, San Francisco</div>
+          </figcaption>
+        </figure>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

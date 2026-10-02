@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Listing 06 — Modern House at Halls Corner</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="global.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: var(--bg); overflow: hidden; }
+  body.slide { display: flex; }
+
+  /* ---- photo column (left) ---- */
+  .photo-col { position: relative; flex: 0 0 564px; }
+  .photo-col .frame { position: absolute; top: 24px; bottom: 24px; left: 24px; right: 0; }
+  .photo-col .frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .photo-col .corner { position: absolute; top: 18px; left: 18px; width: 46px; height: 46px;
+    border-top: 3px solid var(--accent); border-left: 3px solid var(--accent); }
+
+  /* ---- content column (right, dark panel) ---- */
+  .content-col { flex: 1; min-width: 0; display: flex; flex-direction: column; padding: 24px; }
+  .panel { flex: 1; min-height: 0; border-radius: 16px; background: var(--primary-deep); color: var(--on-dark);
+    padding: 44px 50px 34px; display: flex; flex-direction: column; }
+
+  .toprow { display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px; }
+  .chip { display: inline-flex; align-items: center; gap: 8px; padding: 6px 15px; border-radius: 999px;
+    font-family: var(--font-body); font-size: 12px; font-weight: 700; letter-spacing: .16em; line-height: 1;
+    background: rgba(247, 243, 236, 0.08); border: 1px solid var(--hairline-dark); color: var(--on-dark); }
+  .idx { font-family: var(--font-body); font-size: 14px; font-weight: 600; letter-spacing: .2em;
+    color: var(--on-dark-muted); }
+
+  .price { font-family: var(--font-heading); font-weight: 600; font-size: 68px; line-height: 1;
+    letter-spacing: -0.01em; color: var(--on-dark); margin-bottom: 14px; }
+  .price .cur { color: var(--accent); }
+
+  .headline { font-family: var(--font-heading); font-weight: 600; font-size: 40px; line-height: 1.14;
+    letter-spacing: -0.005em; color: var(--on-dark); margin-bottom: 14px; }
+
+  .loc { display: flex; align-items: center; gap: 9px; font-family: var(--font-body);
+    font-size: 16.5px; font-weight: 500; color: var(--on-dark-muted); margin-bottom: 24px; }
+  .loc .material-icons { font-size: 19px; color: var(--accent); }
+
+  .specs { display: flex; align-items: stretch; border-top: 1px solid var(--hairline-dark);
+    border-bottom: 1px solid var(--hairline-dark); padding: 20px 0; margin-bottom: 24px; }
+  .spec { flex: 1; display: flex; align-items: center; gap: 11px; min-width: 0; }
+  .spec + .spec { border-left: 1px solid var(--hairline-dark); padding-left: 24px; }
+  .spec .material-icons { font-size: 23px; color: var(--accent); }
+  .spec .val { font-family: var(--font-body); font-size: 15px; color: var(--on-dark-muted); white-space: nowrap; }
+  .spec .val b { font-size: 22px; font-weight: 600; color: var(--on-dark); letter-spacing: -0.01em; margin-right: 5px; }
+
+  .context { font-family: var(--font-body); font-size: 16.5px; line-height: 1.65;
+    color: var(--on-dark-muted); max-width: 58ch; }
+
+  .strip { margin-top: auto; display: flex; align-items: center; gap: 15px; padding: 13px 18px;
+    border-radius: 14px; background: rgba(247, 243, 236, 0.07); border: 1px solid var(--hairline-dark); }
+  .strip img { width: 46px; height: 46px; border-radius: 50%; object-fit: cover;
+    border: 2px solid rgba(247, 243, 236, 0.28); flex: none; }
+  .strip p { margin: 0; font-family: var(--font-body); font-size: 15.5px; line-height: 1.45;
+    color: var(--on-dark-muted); }
+  .strip b { font-weight: 600; color: var(--on-dark); }
+
+  .closing { margin-top: 14px; font-family: var(--font-heading); font-style: italic; font-weight: 500;
+    font-size: 24px; line-height: 1.3; color: var(--on-dark-faint); }
+</style>
+</head>
+<body class="slide">
+
+  <!-- photo left -->
+  <div class="photo-col">
+    <div class="frame img-frame" style="box-shadow: 0 26px 50px -18px rgba(20,43,30,0.38);">
+      <img src="photo_halls.jpg" alt="Luxury modern villa with pool at dusk at Halls Corner, Las Vegas">
+      <div class="corner" data-decor aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <!-- content right, dark panel -->
+  <div class="content-col">
+    <div class="panel">
+      <div class="toprow">
+        <span class="chip">FOR SALE</span>
+        <span class="idx tnum">06 / 06</span>
+      </div>
+
+      <div class="price tnum"><span class="cur">$</span>1,180,000</div>
+      <h1 class="headline">Modern House at Halls Corner</h1>
+
+      <div class="loc">
+        <i class="material-icons" aria-hidden="true">place</i>
+        <span>Halls Corner, Las Vegas, NV</span>
+      </div>
+
+      <div class="specs">
+        <div class="spec">
+          <i class="material-icons" aria-hidden="true">bed</i>
+          <span class="val"><b class="tnum">3</b> beds</span>
+        </div>
+        <div class="spec">
+          <i class="material-icons" aria-hidden="true">bathtub</i>
+          <span class="val"><b class="tnum">3</b> baths</span>
+        </div>
+        <div class="spec">
+          <i class="material-icons" aria-hidden="true">square_foot</i>
+          <span class="val"><b class="tnum">3,400</b> sqft</span>
+        </div>
+      </div>
+
+      <p class="context">Currently active and represented by a Halcyon agent. Ask us for the full photo set, the floor plan, and a straight answer on what the seller will and will not accept.</p>
+
+      <div class="strip">
+        <span aria-hidden="true" style="width:46px;height:46px;flex:none;border-radius:999px;background:rgba(247,243,236,0.08);border:1.5px solid var(--accent);display:inline-flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-weight:600;font-size:15px;letter-spacing:0.06em;color:var(--on-dark);">MV</span>
+        <p><b>Want a private tour?</b> <span class="tnum">(213) 555-0142</span></p>
+      </div>
+
+      <p class="closing">Find a home you actually want to come back to.</p>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=1280, initial-scale=1">
+<title>Halcyon Estates — Cover</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="global.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+  body{margin:0}
+  .hero-scrim{background:linear-gradient(92deg, rgba(13,28,20,0.97) 0%, rgba(13,28,20,0.90) 34%, rgba(20,43,30,0.62) 66%, rgba(20,43,30,0.32) 100%);}
+  .scrim-top{background:linear-gradient(180deg, rgba(13,28,20,0.90) 0%, rgba(13,28,20,0.50) 90px, rgba(13,28,20,0) 180px);}
+  .scrim-bottom{background:linear-gradient(0deg, rgba(13,28,20,0.94) 0%, rgba(13,28,20,0.55) 110px, rgba(13,28,20,0) 210px);}
+  .cta{display:inline-flex;align-items:center;border-radius:999px;font-size:19px;font-weight:700;padding:14px 34px;line-height:1;letter-spacing:0.01em;}
+</style>
+</head>
+<body class="slide">
+  <img src="photo_cover.jpg" alt="Modern house at dusk" class="img-cover absolute inset-0">
+  <div class="absolute inset-0 hero-scrim" data-decor aria-hidden="true"></div>
+  <div class="absolute inset-x-0 top-0 scrim-top" style="height:180px" data-decor aria-hidden="true"></div>
+  <div class="absolute inset-x-0 bottom-0 scrim-bottom" style="height:210px" data-decor aria-hidden="true"></div>
+
+  <div class="relative z-10 h-full flex flex-col" style="padding:48px 72px 40px;">
+    <!-- top bar : wordmark + phone -->
+    <div class="flex items-start justify-between">
+      <div class="flex items-center" style="gap:12px;">
+        <span data-decor aria-hidden="true" style="width:10px;height:10px;border-radius:999px;background:var(--accent);display:inline-block;"></span>
+        <div>
+          <div style="font-family:var(--font-heading);font-size:27px;font-weight:600;line-height:1;color:var(--on-dark);">Halcyon</div>
+          <div style="font-size:11px;letter-spacing:0.42em;font-weight:600;color:var(--accent);margin-top:6px;">ESTATES</div>
+        </div>
+      </div>
+      <div class="flex items-center" style="gap:8px;color:var(--on-dark);">
+        <i class="material-icons" style="font-size:18px;color:var(--on-dark-muted);">call</i>
+        <span class="tnum" style="font-size:16.5px;font-weight:600;">(213) 555-0142</span>
+      </div>
+    </div>
+
+    <!-- hero copy -->
+    <div class="flex-1 flex flex-col justify-center" style="max-width:800px;">
+      <div style="font-size:12.5px;letter-spacing:0.26em;font-weight:700;color:var(--accent);">BOUTIQUE REAL ESTATE, CALIFORNIA</div>
+      <h1 style="font-family:var(--font-heading);font-size:62px;line-height:1.12;font-weight:600;color:var(--on-dark);margin:18px 0 0;max-width:700px;text-wrap:balance;">Find a home you actually want to come back to.</h1>
+      <p style="font-size:17px;line-height:1.62;color:var(--on-dark-muted);margin:22px 0 0;max-width:560px;">Halcyon Estates is a small team of agents who would rather find you the right house in two months than the wrong one in two weeks. We work with buyers, sellers, and investors across Los Angeles, the Bay Area, and Las Vegas.</p>
+      <div class="flex items-center" style="gap:16px;margin-top:34px;">
+        <a href="#" class="cta" style="background:var(--accent);color:#FDFBF6;">Browse Properties</a>
+        <a href="#" class="cta" style="border:1.5px solid rgba(247,243,236,0.6);color:var(--on-dark);font-weight:600;">How we work with you</a>
+      </div>
+    </div>
+
+    <!-- bottom proof bar -->
+    <div class="flex items-end justify-between" style="border-top:1px solid var(--hairline-dark);padding-top:20px;">
+      <div style="font-size:16px;color:var(--on-dark-muted);">
+        <span class="tnum" style="font-family:var(--font-heading);font-size:22px;font-weight:700;color:var(--accent);">480+</span>
+        <span style="margin-left:8px;">families placed in homes they kept</span>
+      </div>
+      <div style="font-size:16px;color:var(--on-dark-muted);">
+        <span class="tnum" style="font-family:var(--font-heading);font-size:22px;font-weight:700;color:var(--accent);">11+</span>
+        <span style="margin-left:8px;">years helping clients find their next home</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Halcyon Estates — Deck Viewer</title>
+<style>
+  :root { --bg:#142B1E; --ink:#F7F3EC; --copper:#B8763D; }
+  * { box-sizing:border-box; margin:0; }
+  html,body { height:100%; }
+  body { background:var(--bg); font-family:'Source Sans 3','Helvetica Neue',Arial,sans-serif; overflow:hidden; display:flex; flex-direction:column; }
+  header { display:flex; align-items:center; justify-content:space-between; padding:12px 22px; color:var(--ink); flex:none; }
+  header .brand { display:flex; align-items:center; gap:10px; }
+  header .dot { width:9px; height:9px; border-radius:50%; background:var(--copper); }
+  header b { font-family:Georgia,'Times New Roman',serif; font-weight:600; letter-spacing:.01em; }
+  header small { letter-spacing:.24em; color:var(--copper); font-weight:600; margin-left:6px; }
+  .stage { flex:1; display:flex; align-items:center; justify-content:center; min-height:0; padding:0 16px 8px; }
+  .frame-wrap { position:relative; width:1280px; height:720px; transform-origin:center center; box-shadow:0 24px 70px rgba(0,0,0,.45); border-radius:6px; overflow:hidden; background:#F7F3EC; }
+  iframe { width:1280px; height:720px; border:0; display:block; }
+  footer { flex:none; display:flex; align-items:center; justify-content:center; gap:18px; padding:10px 0 16px; color:rgba(247,243,236,.75); }
+  button.nav { background:rgba(247,243,236,.08); color:var(--ink); border:1px solid rgba(247,243,236,.25); border-radius:999px; padding:7px 20px; font-size:14px; cursor:pointer; transition:all .15s ease; }
+  button.nav:hover { background:var(--copper); border-color:var(--copper); color:#fff; }
+  button.nav:disabled { opacity:.35; cursor:default; }
+  button.nav:disabled:hover { background:rgba(247,243,236,.08); color:rgba(247,243,236,.75); border-color:rgba(247,243,236,.25); }
+  .count { font-variant-numeric:tabular-nums; letter-spacing:.12em; font-size:13.5px; min-width:64px; text-align:center; }
+  .hint { position:fixed; right:18px; bottom:14px; color:rgba(247,243,236,.4); font-size:12px; letter-spacing:.05em; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="brand"><span class="dot"></span><b>Halcyon</b><small>ESTATES</small></div>
+    <div style="font-size:13px;letter-spacing:.18em;color:rgba(247,243,236,.55);">BOUTIQUE REAL ESTATE · PREMIER DECK</div>
+  </header>
+  <div class="stage"><div class="frame-wrap" id="wrap"><iframe id="frame" src="slides/slide_01.html"></iframe></div></div>
+  <footer>
+    <button class="nav" id="prev">&#8592; Prev</button>
+    <span class="count" id="count">01 / 14</span>
+    <button class="nav" id="next">Next &#8594;</button>
+  </footer>
+  <div class="hint">Use &#8592; / &#8594; arrow keys</div>
+<script>
+  const N = 14; let i = 1;
+  const frame = document.getElementById('frame'), count = document.getElementById('count');
+  const prev = document.getElementById('prev'), next = document.getElementById('next');
+  const pad = n => String(n).padStart(2, '0');
+  function show(n) {
+    i = Math.min(N, Math.max(1, n));
+    frame.src = 'slides/slide_' + pad(i) + '.html';
+    count.textContent = pad(i) + ' / ' + pad(N);
+    prev.disabled = (i === 1); next.disabled = (i === N);
+  }
+  prev.onclick = () => show(i - 1);
+  next.onclick = () => show(i + 1);
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') show(i + 1);
+    if (e.key === 'ArrowLeft'  || e.key === 'PageUp')   show(i - 1);
+    if (e.key === 'Home') show(1);
+    if (e.key === 'End')  show(N);
+  });
+  function fit() {
+    const wrap = document.getElementById('wrap');
+    const s = Math.min((innerWidth - 60) / 1280, (innerHeight - 140) / 720, 1);
+    wrap.style.transform = 'scale(' + s + ')';
+  }
+  addEventListener('resize', fit); fit(); show(1);
+</script>
+</body>
+</html>

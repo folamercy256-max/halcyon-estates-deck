@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Listing 02 — Modern Loft Near Mission Bay</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="global.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+  html, body { margin: 0; padding: 0; background: var(--bg); overflow: hidden; }
+  body.slide { display: flex; }
+
+  /* ---- photo column (left) ---- */
+  .photo-col { position: relative; flex: 0 0 564px; }
+  .photo-col .frame { position: absolute; top: 24px; bottom: 24px; left: 24px; right: 0; }
+  .photo-col .frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .photo-col .corner { position: absolute; top: 18px; left: 18px; width: 46px; height: 46px;
+    border-top: 3px solid var(--accent); border-left: 3px solid var(--accent); }
+
+  /* ---- content column (right) ---- */
+  .content-col { flex: 1; min-width: 0; display: flex; flex-direction: column; padding: 52px 64px 48px 60px; }
+
+  .toprow { display: flex; align-items: center; justify-content: space-between; margin-bottom: 30px; }
+  .chip { display: inline-flex; align-items: center; gap: 8px; padding: 6px 15px; border-radius: 999px;
+    font-family: var(--font-body); font-size: 12px; font-weight: 700; letter-spacing: .16em; line-height: 1; }
+  .chip-rent { background: rgba(31, 61, 44, 0.08); border: 1px solid var(--hairline); color: var(--primary); }
+  .idx { font-family: var(--font-body); font-size: 14px; font-weight: 600; letter-spacing: .2em;
+    color: rgba(31, 61, 44, 0.72); }
+
+  .price { font-family: var(--font-heading); font-weight: 600; font-size: 68px; line-height: 1;
+    letter-spacing: -0.01em; color: var(--primary); margin-bottom: 16px; }
+  .price .cur { color: var(--accent); }
+  .price .per { font-size: 26px; font-weight: 500; color: var(--accent); margin-left: 8px; letter-spacing: 0; }
+
+  .headline { font-family: var(--font-heading); font-weight: 600; font-size: 40px; line-height: 1.14;
+    letter-spacing: -0.005em; color: var(--primary); margin-bottom: 14px; }
+
+  .loc { display: flex; align-items: center; gap: 9px; font-family: var(--font-body);
+    font-size: 16.5px; font-weight: 500; color: rgba(31, 61, 44, 0.82); margin-bottom: 26px; }
+  .loc .material-icons { font-size: 19px; color: var(--accent-deep); }
+
+  .specs { display: flex; align-items: stretch; border-top: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline); padding: 20px 0; margin-bottom: 26px; }
+  .spec { flex: 1; display: flex; align-items: center; gap: 11px; min-width: 0; }
+  .spec + .spec { border-left: 1px solid var(--hairline); padding-left: 24px; }
+  .spec .material-icons { font-size: 23px; color: var(--accent-deep); }
+  .spec .val { font-family: var(--font-body); font-size: 15px; color: rgba(31, 61, 44, 0.82); white-space: nowrap; }
+  .spec .val b { font-size: 22px; font-weight: 600; color: var(--primary); letter-spacing: -0.01em; margin-right: 5px; }
+
+  .context { font-family: var(--font-body); font-size: 16.5px; line-height: 1.65;
+    color: rgba(31, 61, 44, 0.82); max-width: 58ch; }
+
+  .strip { margin-top: auto; display: flex; align-items: center; gap: 15px; padding: 13px 18px;
+    border-radius: 14px; background: var(--surface); border: 1px solid var(--hairline); }
+  .strip img { width: 46px; height: 46px; border-radius: 50%; object-fit: cover;
+    border: 2px solid rgba(31, 61, 44, 0.10); flex: none; }
+  .strip p { margin: 0; font-family: var(--font-body); font-size: 15.5px; line-height: 1.45;
+    color: rgba(31, 61, 44, 0.82); }
+  .strip b { font-weight: 600; color: var(--primary); }
+</style>
+</head>
+<body class="slide">
+
+  <!-- photo left -->
+  <div class="photo-col">
+    <div class="frame img-frame" style="box-shadow: 0 26px 50px -18px rgba(20,43,30,0.30);">
+      <img src="photo_loft.jpg" alt="Waterside modern loft building in the Mission District, San Francisco">
+      <div class="corner" data-decor aria-hidden="true"></div>
+    </div>
+  </div>
+
+  <!-- content right -->
+  <div class="content-col">
+    <div class="toprow">
+      <span class="chip chip-rent">FOR RENT</span>
+      <span class="idx tnum">02 / 06</span>
+    </div>
+
+    <div class="price tnum"><span class="cur">$</span>6,200<span class="per">/ mo</span></div>
+    <h1 class="headline">Modern Loft Near Mission Bay</h1>
+
+    <div class="loc">
+      <i class="material-icons" aria-hidden="true">place</i>
+      <span>Mission District, San Francisco, CA</span>
+    </div>
+
+    <div class="specs">
+      <div class="spec">
+        <i class="material-icons" aria-hidden="true">bed</i>
+        <span class="val"><b class="tnum">2</b> beds</span>
+      </div>
+      <div class="spec">
+        <i class="material-icons" aria-hidden="true">bathtub</i>
+        <span class="val"><b class="tnum">2</b> baths</span>
+      </div>
+      <div class="spec">
+        <i class="material-icons" aria-hidden="true">square_foot</i>
+        <span class="val"><b class="tnum">1,200</b> sqft</span>
+      </div>
+    </div>
+
+    <p class="context">Currently active and represented by a Halcyon agent. Ask us for the full photo set, the floor plan, and a straight answer on what the owner will and will not accept.</p>
+
+    <div class="strip card">
+      <span aria-hidden="true" style="width:46px;height:46px;flex:none;border-radius:999px;background:var(--accent-soft);border:1.5px solid var(--accent);display:inline-flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-weight:600;font-size:15px;letter-spacing:0.06em;color:var(--primary);">MV</span>
+      <p><b>Schedule a viewing</b> — <span class="tnum">(213) 555-0142</span></p>
+    </div>
+  </div>
+
+</body>
+</html>

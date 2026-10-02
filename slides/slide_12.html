@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>How It Works — Halcyon Estates</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="global.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+  html, body { margin:0; padding:0; }
+  .wrap { width:100%; height:100%; box-sizing:border-box; display:flex; flex-direction:column; padding:52px 64px 44px; }
+  .eyebrow-row { display:flex; align-items:center; gap:14px; }
+  .eyebrow { font-family:var(--font-body); font-size:12px; font-weight:700; letter-spacing:.24em; color:var(--accent-deep); text-transform:uppercase; }
+  .headline { font-family:var(--font-heading); font-size:42px; font-weight:600; line-height:1.1; letter-spacing:-0.01em; color:var(--ink); margin:14px 0 0; }
+  .intro { max-width:720px; margin:14px 0 0; font-size:16px; line-height:1.6; color:var(--ink-muted); }
+  .steps-zone { flex:1; min-height:0; display:flex; flex-direction:column; justify-content:center; }
+  .steps { display:grid; grid-template-columns:1fr 1fr 1fr; }
+  .step { padding-right:40px; }
+  .step.mid { border-left:1px solid var(--hairline); padding:0 40px; }
+  .step.last { border-left:1px solid var(--hairline); padding-left:40px; padding-right:0; }
+  .step-num { font-family:var(--font-heading); font-size:124px; font-weight:500; line-height:.9; color:var(--accent); }
+  .step-rule { height:1px; background:var(--hairline); margin:20px 0 22px; }
+  .step-head { display:flex; align-items:center; gap:12px; }
+  .step-chip { width:38px; height:38px; border-radius:10px; background:var(--accent-soft); display:flex; align-items:center; justify-content:center; flex:none; }
+  .step-chip .material-icons { font-size:20px; color:var(--accent); }
+  .step-title { font-family:var(--font-heading); font-size:22px; font-weight:600; line-height:1.15; color:var(--ink); margin:0; }
+  .step-body { margin:14px 0 0; font-size:16px; line-height:1.62; color:var(--ink-muted); }
+  .closing-strip { border-top:1px solid var(--hairline); padding-top:20px; display:flex; justify-content:flex-end; }
+  .closing { font-family:var(--font-heading); font-style:italic; font-size:24px; font-weight:500; color:var(--accent); margin:0; }
+</style>
+</head>
+<body class="slide">
+  <main class="wrap">
+    <header>
+      <div class="eyebrow-row">
+        <span class="accent-bar"></span>
+        <span class="eyebrow">HOW IT WORKS</span>
+      </div>
+      <h1 class="headline">Three steps. No surprises in between.</h1>
+      <p class="intro">We keep the process simple on purpose. You will always know which step you are on, what happens next, and who is handling it.</p>
+    </header>
+
+    <div class="steps-zone">
+      <section class="steps">
+        <article class="step">
+          <div class="step-num tnum" aria-hidden="true">01</div>
+          <div class="step-rule"></div>
+          <div class="step-head">
+            <span class="step-chip"><i class="material-icons">search</i></span>
+            <h2 class="step-title">Find the Right Property</h2>
+          </div>
+          <p class="step-body">Tell us what matters most to you, the neighborhood feel, the school district, the morning commute. We pull listings that match and skip the ones that do not.</p>
+        </article>
+
+        <article class="step mid">
+          <div class="step-num tnum" aria-hidden="true">02</div>
+          <div class="step-rule"></div>
+          <div class="step-head">
+            <span class="step-chip"><i class="material-icons">gavel</i></span>
+            <h2 class="step-title">Make a Confident Offer</h2>
+          </div>
+          <p class="step-body">We pull recent comps, walk the property with you, and put together an offer that makes sense. You will know exactly why we are suggesting the number we suggest.</p>
+        </article>
+
+        <article class="step last">
+          <div class="step-num tnum" aria-hidden="true">03</div>
+          <div class="step-rule"></div>
+          <div class="step-head">
+            <span class="step-chip"><i class="material-icons">done_all</i></span>
+            <h2 class="step-title">Close and Move In</h2>
+          </div>
+          <p class="step-body">Inspection, appraisal, lender coordination, title work. We stay on top of every deadline so closing day feels like a formality instead of a fire drill.</p>
+        </article>
+      </section>
+    </div>
+
+    <footer class="closing-strip">
+      <p class="closing">You will always know which step you are on.</p>
+    </footer>
+  </main>
+</body>
+</html>
